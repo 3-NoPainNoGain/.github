@@ -83,8 +83,6 @@ assignees: ''
 ```
 </details>
 
-<img src="https://github.com/user-attachments/assets/88589376-4644-46b5-94fe-dc913cb72db0" width="400"/>
-
 ---
 
 ### 🤝 커밋 메시지 컨벤션 
