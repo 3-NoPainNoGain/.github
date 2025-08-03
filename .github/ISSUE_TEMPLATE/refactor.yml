@@ -1,4 +1,4 @@
-name: ♻️ Refactor Request
+name: ♻️ Refactor
 description: 코드 구조 개선, 성능 최적화, 유지보수성 향상 등을 위한 요청
 title: "[REFACTOR] "
 labels: ["refactor"]
