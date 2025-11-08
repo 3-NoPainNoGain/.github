@@ -16,4 +16,4 @@
 - [보고서](https://github.com/3-NoPainNoGain/.github/tree/main/report)
 
   - [1차 보고서](https://github.com/3-NoPainNoGain/.github/blob/main/report/1%EC%B0%A8%EB%B3%B4%EA%B3%A0%EC%84%9C.md)
-  - 2차 보고서 
+  - [2차 보고서](https://github.com/3-NoPainNoGain/.github/blob/main/report/2%EC%B0%A8%EB%B3%B4%EA%B3%A0%EC%84%9C.md) 
