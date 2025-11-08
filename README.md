@@ -1,76 +1,19 @@
 # 🩺 handDoc 
 
-handDoc는 청각장애인을 위한 수어/음성-텍스트 변환 대면+비대면 진료 서비스를 제공하는 웹 애플리케이션입니다. 청각장애인의 수어를 인식하고 의사에게 텍스트로 변환되어 전송되며, 의사의 음성 또한 텍스트로 변환되어 환자에게 전달됩니다. 이를 통해 청각장애인과 의료진 간의 원활한 의사소통을 지원하며, 비대면 상황에서도 의료 서비스를 동등하게 이용할 수 있는 환경을 제공합니다.
+> handDoc는 청각장애인을 위한 수어/음성-텍스트 변환 대면+비대면 진료 서비스를 제공하는 웹 애플리케이션입니다. 청각장애인의 수어를 인식하고 의사에게 텍스트로 변환되어 전송되며, 의사의 음성 또한 텍스트로 변환되어 환자에게 전달됩니다. 이를 통해 청각장애인과 의료진 간의 원활한 의사소통을 지원하며, 비대면 상황에서도 의료 서비스를 동등하게 이용할 수 있는 환경을 제공합니다.
 
----
+
 ## 📂 파트별 Repository 
 - 각 파트별 기술 스택과 세부 구현 내용은 링크된 파트별 `README.md` 에서 확인할 수 있습니다.
 
-  - [FastAPI](https://github.com/3-NoPainNoGain/FastAPI) : Python 기반 AI 서버. WebSocket 통신을 통해 영상 프레임을 전달받고, 수어 인식 결과를 반환 
+  - [Sign-AI](https://github.com/3-NoPainNoGain/Sign-AI) : Python 기반 AI 서버. WebSocket 통신을 통해 영상 프레임을 전달받고, 수어 인식 결과를 반환
+  - [Speech-AI](https://github.com/3-NoPainNoGain/Speech-AI) : Python 기반 AI 서버. 파인 튜닝된 Whisper 모델을 통해 음성 텍스트 변환 
   - [Frontend](https://github.com/3-NoPainNoGain/FE) : React 기반 사용자 인터페이스. WebRTC 연결을 통한 화상 진료 및 실시간 사용자 인터랙션 구현 
   - [Backend](https://github.com/3-NoPainNoGain/BE) : Spring Boot 기반 백엔드, 사용자 인증, WebRTC 신호 교환 등 핵심 서비스 로직 담당
 
---- 
-## 📌 Convention 
-### Branch Convention 
-| 머릿말 | 설명 |
-| --- | --- |
-| main | 서비스 브랜치 |
-| develop | 배포 전 작업 기준 |
-| feat | 기능 단위 구현 |
-| chore | 기본 설정, 의존성, yml 등 기타 작업 브랜치 | 
-| refactor | 리팩토링 브랜치 (기능 변화 없음) | 
-| hotfix | 서비스 중 긴급 수정 건에 대한 처리 | 
+## 👥 팀 Repository 
+- [팀 그라운드 룰](https://github.com/3-NoPainNoGain/.github/blob/main/GroundRule.md) 
+- [보고서](https://github.com/3-NoPainNoGain/.github/tree/main/report)
 
-Branch 생성 예시 
-- `feat/social-login-#5`
-- `feat/기능요약-이슈번호`
-
----
-
-### 🤝 커밋 메시지 컨벤션 
-
-| 커밋 유형 | 의미 |
-| --- | --- |
-| `Feat` | 새로운 기능 추가 |
-| `Fix` | 버그 수정 |
-| `Docs` | 문서 수정 |
-| `Style` | 코드 formatting, 세미콜론 누락, 코드 자체의 변경이 없는 경우 |
-| `Refactor` | 코드 리팩토링 |
-| `Test` | 테스트 코드, 리팩토링 테스트 코드 추가 |
-| `Chore` | 패키지 매니저 수정, 그 외 기타 수정 ex) .gitignore |
-| `Design` | CSS 등 사용자 UI 디자인 변경 |
-| `Comment` | 필요한 주석 추가 및 변경 |
-| `Rename` | 파일 또는 폴더 명을 수정하거나 옮기는 작업만인 경우 |
-| `Remove` | 파일을 삭제하는 작업만 수행한 경우 |
-| `!HOTFIX` | 급하게 치명적인 버그를 고쳐야 하는 경우 |
-
-<details> 
-<summary>Commit Convention Detail</summary>
-
-1. 커밋 유형 지정
-- 커밋 유형은 영어 대문자로 작성하기
-2. 제목과 본문을 빈행으로 분리
-- 커밋 유형 이후 제목과 본문을 한글로 작성하여 내용이 잘 전달될 수 있도록 할 것
-- 본문에는 변경한 내용과 이유 설명 (어떻게 보다는 무엇 & 왜를 설명)
-3. 제목 첫 글자는 대문자로, 끝에는 `.` 금지
-4. 제목은 영문 기준 50자 이내로 할 것
-5. 마지막에 이슈번호 추가하기
-6. 자신의 코드가 직관적으로 바로 파악할 수 있다고 생각하지 말자
-7. 여러 가지 항목이 있다면 글머리 기호를 통해 가독성 높이기
-```
-- 변경 내용 1
-- 변경 내용 2
-- 변경 내용 3
-```
-8. 예시
-```
-BE
-커밋유형: 기능 설명 (#이슈번호)
-ex) Feat: 로그인 기능 구현 (#5)
-
-FE
-커밋유형: 기능 설명 (#이슈번호)
-ex) Feat: 로그인 기능 구현 (#5)
-```
-</details>
+  - [1차 보고서](https://github.com/3-NoPainNoGain/.github/blob/main/report/1%EC%B0%A8%EB%B3%B4%EA%B3%A0%EC%84%9C.md)
+  - 2차 보고서 
